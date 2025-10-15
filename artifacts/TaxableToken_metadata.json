@@ -8,6 +8,11 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "initialOwner",
+						"type": "address"
+					},
+					{
 						"internalType": "string",
 						"name": "name",
 						"type": "string"
@@ -26,11 +31,6 @@
 						"internalType": "uint256",
 						"name": "_taxFee",
 						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "initialOwner",
-						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -708,7 +708,6 @@
 			}
 		],
 		"devdoc": {
-			"details": "ERC20 token con sistema de impuestos en transferencias",
 			"errors": {
 				"ERC20InsufficientAllowance(address,uint256,uint256)": [
 					{
@@ -798,24 +797,8 @@
 				"balanceOf(address)": {
 					"details": "Returns the value of tokens owned by `account`."
 				},
-				"calculateTax(uint256)": {
-					"details": "Calcula el impuesto y monto neto para una transferencia"
-				},
-				"constructor": {
-					"details": "Constructor del contrato",
-					"params": {
-						"_taxFee": "Porcentaje de impuesto (0-100)",
-						"_treasury": "Dirección de la tesorería",
-						"initialOwner": "Dirección del propietario inicial",
-						"name": "Nombre del token",
-						"symbol": "Símbolo del token"
-					}
-				},
 				"decimals()": {
 					"details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5.05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the default value returned by this function, unless it's overridden. NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
-				},
-				"isAddressExempt(address)": {
-					"details": "Función de utilidad para verificar si una dirección está exenta"
 				},
 				"name()": {
 					"details": "Returns the name of the token."
@@ -823,33 +806,11 @@
 				"owner()": {
 					"details": "Returns the address of the current owner."
 				},
-				"pause()": {
-					"details": "Pausa todas las transferencias"
-				},
 				"paused()": {
 					"details": "Returns true if the contract is paused, and false otherwise."
 				},
 				"renounceOwnership()": {
 					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
-				},
-				"setFeeExempt(address,bool)": {
-					"details": "Establece la exención de impuestos para una dirección",
-					"params": {
-						"account": "Dirección a modificar",
-						"exempt": "true para exentar, false para aplicar impuestos"
-					}
-				},
-				"setTaxFee(uint256)": {
-					"details": "Actualiza el porcentaje de impuesto",
-					"params": {
-						"_newTaxFee": "Nuevo porcentaje (0-100)"
-					}
-				},
-				"setTreasury(address)": {
-					"details": "Actualiza la dirección de la tesorería",
-					"params": {
-						"_newTreasury": "Nueva dirección de tesorería"
-					}
 				},
 				"symbol()": {
 					"details": "Returns the symbol of the token, usually a shorter version of the name."
@@ -865,12 +826,8 @@
 				},
 				"transferOwnership(address)": {
 					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				},
-				"unpause()": {
-					"details": "Reanuda las transferencias"
 				}
 			},
-			"title": "TaxableToken",
 			"version": 1
 		},
 		"userdoc": {
@@ -881,7 +838,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"main.sol": "TaxableToken"
+			"contracts/main.sol": "TaxableToken"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -951,12 +908,12 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"main.sol": {
-			"keccak256": "0xa6527ed05bda5e178f42411683e505946a5c191334005fe19352901402223b6f",
+		"contracts/main.sol": {
+			"keccak256": "0x0a7b89c617d925ced8fbb6d5a461ea09bd00c6805bab6b81371f2a89f553591b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://aea87a884df221c6b2470c51a0cfbfb5c032038e5546aba0521db23f2dc479a8",
-				"dweb:/ipfs/QmPDBo3ssGwru1k6TNBcNj2JwZ8gLNiFkF7gCpQTdRT3Ww"
+				"bzz-raw://5d6c15d641e67ca838c309a7b81b9bf773c4eb07ef60cb24bfb21fc56b6c0478",
+				"dweb:/ipfs/QmPDcrmsZn43Jhc54wLHBj7XA446GewotWeHHawVUoaTQ3"
 			]
 		}
 	},
