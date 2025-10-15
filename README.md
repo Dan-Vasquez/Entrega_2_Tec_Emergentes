@@ -1,5 +1,10 @@
 # ✅ Desarrollo
 
+Desarrollado por:
+- Daniel Andres Vasquez
+- Willian Chapid Tobar
+- Miguel Angel Nivia Ortega
+
 ### 1. **Herencia Correcta**
 - Hereda de `ERC20`, `Ownable` y `Pausable` de OpenZeppelin
 - Constructor satisface todos los contratos base
